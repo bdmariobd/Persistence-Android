@@ -5,8 +5,8 @@
 
     <item
         android:id="@+id/opcBorrar"
-        android:icon="@android:drawable/ic_menu_delete"
+        android:icon="@drawable/delete_forever_24px"
         android:menuCategory="system"
         android:title="Borrar"
-        app:showAsAction="always" />
+        app:showAsAction="always" ></item>
 </menu>

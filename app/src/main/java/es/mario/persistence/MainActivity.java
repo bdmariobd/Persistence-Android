@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.color.DynamicColors;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -66,12 +67,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.opcBorrar) {
-            deleteFile();
-            noteTextView.setText("");
+            manageClickDeleteButton();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void manageClickDeleteButton() {
+        DialogDelete dialogDelete = new DialogDelete();
+        dialogDelete.show(getSupportFragmentManager(), "DialogDelete");
+    }
+
 
     public String readFile(String filename) throws IOException {
         BufferedReader fin = new BufferedReader(new InputStreamReader(openFileInput(filename)));
@@ -105,10 +111,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void deleteFile() {
+    public void deleteFile() {
         if (fileExists()) {
-            deleteFile(MainActivity.MI_FICHERO);
+            createFile();
         }
+        noteTextView.setText("");
     }
 
     private void appendToFile(String content) {
