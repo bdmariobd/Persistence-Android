@@ -15,13 +15,13 @@ public class DialogDelete extends DialogFragment {
         final MainActivity mainActivity = (MainActivity) requireActivity();
 
         return new MaterialAlertDialogBuilder(mainActivity)
-                .setTitle("Borrar notas")
-                .setMessage("¿Estás seguro de que quieres borrar las notas?")
-                .setPositiveButton("Borrar", (dialog, which) -> {
+                .setTitle(R.string.borrar_notas)
+                .setMessage(R.string.est_s_seguro_de_que_quieres_borrar_las_notas)
+                .setPositiveButton(R.string.borrar, (dialog, which) -> {
                     // Delete the note
                     mainActivity.deleteFile();
                 })
-                .setNegativeButton("Cancelar", (dialog, which) -> {
+                .setNegativeButton(R.string.cancelar, (dialog, which) -> {
                     dismiss();
                 })
                 .create();

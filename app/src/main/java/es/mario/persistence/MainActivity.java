@@ -2,7 +2,6 @@ package es.mario.persistence;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.content.Context;
 import android.util.Log;
@@ -12,8 +11,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.color.DynamicColors;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;

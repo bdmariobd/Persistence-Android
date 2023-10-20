@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Persistence</string>
+    <string name="borrar_notas">Borrar notas</string>
+    <string name="est_s_seguro_de_que_quieres_borrar_las_notas">¿Estás seguro de que quieres borrar las notas?</string>
+    <string name="borrar">Borrar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
